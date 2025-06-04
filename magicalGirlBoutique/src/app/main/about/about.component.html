@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <div *ngFor="let creator of creators; let i=index" class="card mb-3">
+        <div class="card-body">
+            <img src="{{creator.thumbnail}}">
+            <h5 class="card-title">{{ creator.name }}</h5>
+            <p class="card-text">{{ creator.role }}</p>
+            <p class="card-text">
+                <span *ngIf="creator.isExpanded">
+                    {{ creator.description }}
+                </span>
+            </p>
+            <button class="btn btn-primary" (click)="showMore(i)">
+                {{ creator.isExpanded ? 'Show Less' : 'Show More'}}
+            </button>
+        </div>
+    </div>
+</div>

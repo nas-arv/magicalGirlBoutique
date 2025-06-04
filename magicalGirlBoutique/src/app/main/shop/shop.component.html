@@ -1,0 +1,27 @@
+<div>
+    <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search" name="query"
+            [(ngModel)]="query">
+        <button class="btn btn-outline-success" type="button" (click)="onSearch()">Search</button>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div *ngFor="let product of searchedProducts" class="card mb-3">
+                <div class="card-body">
+                    <img src="{{product.thumbnail}}">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">${{ product.price }}</p>
+                    <button class="btn btn-primary" (click)=addToCart(product.id)>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <app-cart [products]="products"></app-cart>
+        </div>
+    </div>
+</div>
+

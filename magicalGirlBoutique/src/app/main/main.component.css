@@ -1,0 +1,102 @@
+.navbar {
+    background: rgb(248, 249, 250, 0.5) !important;
+    box-shadow: 0 4px 20px rgba(173, 216, 230, 0.2);
+    padding: 15px 20px;
+    border-radius: 0 0 15px 15px;
+    border: none;
+    margin-bottom: 1.4%;
+}
+
+.navbar-brand {
+    color: #6d6875 !important;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    color: #8e8d8a !important;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 8px 15px !important;
+}
+
+.nav-link.active {
+    color: #ff758f !important;
+    background-color: rgba(255, 117, 143, 0.1);
+}
+
+.nav-link:hover {
+    color: #6d6875 !important;
+    transform: translateY(-2px);
+}
+
+.form-control {
+    border-radius: 20px;
+    border: 1px solid rgba(173, 216, 230, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #6d6875;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(162, 215, 216, 0.25);
+    border-color: #a2d7d8;
+}
+
+.btn-outline-success {
+    color: #419a9b;
+    border-color: #419a9b;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #419a9b;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(162, 215, 216, 0.3);
+}
+
+.btn-outline-danger {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 117, 143, 0.1);
+}
+
+.btn-outline-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 117, 143, 0.2);
+}
+
+.vr {
+    opacity: 0.5;
+    background-color: #419a9b;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(173, 216, 230, 0.3);
+    }
+
+    .vr {
+        display: none;
+    }
+}

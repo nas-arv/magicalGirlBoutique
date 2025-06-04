@@ -1,0 +1,39 @@
+<div [ngSwitch]="currentView">
+  <app-login 
+    *ngSwitchCase="'login'"
+    (loginsuccessful)="redirectToMain()"
+    (showRegister)="switchToRegister()">
+  </app-login>
+  
+  <app-register
+    *ngSwitchCase="'register'"
+    (registersuccessful)="switchToLogin()"
+    (showLogin)="switchToLogin()">
+  </app-register>
+  
+  <app-main 
+    *ngSwitchCase="'main'"
+    (logoutsuccessful)="switchToLogin()"
+    (showLogin)="switchToLogin()">
+  </app-main>
+
+  <app-shop
+    *ngSwitchCase="'shop'">
+  </app-shop>
+
+  <app-cart
+    *ngSwitchCase="'cart'">
+  </app-cart>
+
+  <app-about
+    *ngSwitchCase="'about'">
+  </app-about>
+
+  <app-contact
+    *ngSwitchCase="'contact'">
+  </app-contact>
+
+  <app-index
+    *ngSwitchCase="'index'">
+  </app-index>
+</div>

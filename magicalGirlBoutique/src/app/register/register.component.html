@@ -1,0 +1,19 @@
+<form #loginForm="ngForm" (submit)="onSubmit()" class="container mt-5 w-50 border p-4 rounded shadow-sm">
+  <h2 class="text-center mb-4">Register</h2>
+
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" required class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary w-50">Register</button>
+
+  <div>
+    <p>Already have an account? Click <a (click)="onLoginClick()" id="a">here</a> to login</p>
+  </div>
+</form>

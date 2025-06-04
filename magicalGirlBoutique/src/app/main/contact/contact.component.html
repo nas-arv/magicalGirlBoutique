@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h2>Contact Us</h2>
+  <form #contactForm="ngForm" (ngSubmit)="submitForm()">
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com"
+        [(ngModel)]="email" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="message" class="form-label">Send us a Message</label>
+      <textarea class="form-control" id="message" rows="3" [(ngModel)]="message" name="message"
+        required></textarea>
+    </div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </div>
+
+  </form>
+</div>
